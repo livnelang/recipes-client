@@ -1,0 +1,16 @@
+.AppButton {
+    color: #FFFFFFFF;
+    padding: 19px 32px;
+    border-radius: 32px;
+    box-sizing: border-box;
+}
+
+.AppButton.primary {
+    background: #1FCC79;
+    color: #FFFFFFFF;
+}
+
+.AppButton.grey {
+    background: #F4F5F7;
+    color: var(--main);
+}

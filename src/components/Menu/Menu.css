@@ -1,0 +1,26 @@
+.Menu {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    padding: 24px;
+    box-sizing: border-box;
+    background: #fff;
+    z-index: 999;
+}
+
+.Menu .navItem{
+    color: #9FA5C0;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Menu .navItem.highlighted {
+    color: #1FCC79;
+}

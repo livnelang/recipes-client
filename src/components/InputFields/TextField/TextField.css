@@ -1,0 +1,19 @@
+.TextField {
+    display: flex;
+    width: 100%;
+    border: 1px solid #D0DBEA;
+    box-sizing: border-box;
+    border-radius: 32px;
+    color: var(--secondary);
+    padding: 20px 0 20px 24px;
+    text-align: left;
+}
+
+.TextField input {
+    border: none;
+    font-family: Poppins
+}
+
+.TextField input:focus {
+    outline: none;
+}

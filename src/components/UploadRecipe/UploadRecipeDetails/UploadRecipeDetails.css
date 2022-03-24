@@ -1,0 +1,65 @@
+.UploadRecipeDetails {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 150px;
+    padding-bottom: 40px;
+    overflow-y: scroll;
+}
+
+.UploadRecipeDetails > .section + .section {
+    margin-top: 24px;
+}
+ 
+.UploadRecipeDetails .groupInput {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.UploadRecipeDetails .groupInput .title {
+    margin-bottom: 12px;
+}
+
+.UploadRecipeDetails .groupInput .title .durationMinutesText {
+    color: var(--secondary);
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.UploadRecipeDetails .coverSection {
+    position: relative;
+    height: 161px;
+    border: 2px dashed #D0DBEA;
+    border-radius: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.UploadRecipeDetails .coverSection.selectedImage {
+    padding: 0; 
+    border: none;
+}
+
+.UploadRecipeDetails .coverSection .coverPhotoInput {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    left: 0;
+    top: 0;
+}
+
+.UploadRecipeDetails .coverSection img {
+    width: inherit;
+    height: inherit;
+    border-radius: 16px;
+}
+
+
+.UploadRecipeDetails .coverSection .removeSelectedImage {
+    position: absolute;
+    right: 10px;
+    bottom: -30px;
+    color: #607d8b;
+}

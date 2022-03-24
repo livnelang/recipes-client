@@ -1,0 +1,49 @@
+.RecipeStep {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.stepNumber {
+    width: 24px;
+    height: 24px;
+    background: var(--main);
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    flex-shrink: 0;
+    line-height: 24px;
+    box-sizing: border-box;
+}
+
+.RecipeStep .stepNumber {
+    margin: 0 16px 16px 0;
+}
+
+.RecipeStep .stepContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.RecipeStep .stepContent .stepText {
+    color: var(--main);
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.RecipeStep .stepImages {
+    display: flex;
+    flex-direction: column;
+}
+
+.RecipeStep .stepImages img {
+    height: 155px;
+    border-radius: 16px;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.RecipeStep .stepImages > img + img {
+    margin-top: 16px;
+}

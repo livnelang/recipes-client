@@ -1,0 +1,20 @@
+.RangeSlider {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.input-range__track--active, 
+.input-range__slider {
+    background: #1FCC79 !important;
+    border: none !important;
+}
+
+.input-range__label-container {
+    font-size: 15px !important;
+    color: #9FA5C0 !important;
+}
+
+.input-range__label--max .input-range__label-container,
+.input-range__label--min .input-range__label-container {
+    left: 0 !important;
+}

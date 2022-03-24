@@ -1,0 +1,22 @@
+.RecipesList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+}
+
+.RecipesList .RecipeCard {
+    width: 48%;
+    margin: 1%;
+}
+
+.RecipesList .listContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    margin-bottom: 100px;
+}
+
+.listContainer > * {
+    margin-bottom: 16px !important;;
+}
