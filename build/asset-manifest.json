@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/livnelang/recipes-clientstatic/css/main.b897a6a0.chunk.css",
+    "main.js": "/livnelang/recipes-clientstatic/js/main.de784502.chunk.js",
+    "main.js.map": "/livnelang/recipes-clientstatic/js/main.de784502.chunk.js.map",
+    "runtime-main.js": "/livnelang/recipes-clientstatic/js/runtime-main.93c2fc78.js",
+    "runtime-main.js.map": "/livnelang/recipes-clientstatic/js/runtime-main.93c2fc78.js.map",
+    "static/css/2.8e54585f.chunk.css": "/livnelang/recipes-clientstatic/css/2.8e54585f.chunk.css",
+    "static/js/2.a31db08d.chunk.js": "/livnelang/recipes-clientstatic/js/2.a31db08d.chunk.js",
+    "static/js/2.a31db08d.chunk.js.map": "/livnelang/recipes-clientstatic/js/2.a31db08d.chunk.js.map",
+    "index.html": "/livnelang/recipes-clientindex.html",
+    "static/css/2.8e54585f.chunk.css.map": "/livnelang/recipes-clientstatic/css/2.8e54585f.chunk.css.map",
+    "static/css/main.b897a6a0.chunk.css.map": "/livnelang/recipes-clientstatic/css/main.b897a6a0.chunk.css.map",
+    "static/js/2.a31db08d.chunk.js.LICENSE.txt": "/livnelang/recipes-clientstatic/js/2.a31db08d.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/livnelang/recipes-clientstatic/media/Poppins-Regular.8081832f.ttf",
+    "static/media/camera.a23b1f93.svg": "/livnelang/recipes-clientstatic/media/camera.a23b1f93.svg",
+    "static/media/circles_logo_overlay.32678c32.svg": "/livnelang/recipes-clientstatic/media/circles_logo_overlay.32678c32.svg",
+    "static/media/drag_icon.30fd77c3.svg": "/livnelang/recipes-clientstatic/media/drag_icon.30fd77c3.svg",
+    "static/media/recipe_circle.8c67c8d0.svg": "/livnelang/recipes-clientstatic/media/recipe_circle.8c67c8d0.svg",
+    "static/media/search.e45cf701.svg": "/livnelang/recipes-clientstatic/media/search.e45cf701.svg",
+    "static/media/undraw_hamburger.1fd2059a.svg": "/livnelang/recipes-clientstatic/media/undraw_hamburger.1fd2059a.svg",
+    "static/media/upload_cover.642ff6e7.svg": "/livnelang/recipes-clientstatic/media/upload_cover.642ff6e7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.93c2fc78.js",
+    "static/css/2.8e54585f.chunk.css",
+    "static/js/2.a31db08d.chunk.js",
+    "static/css/main.b897a6a0.chunk.css",
+    "static/js/main.de784502.chunk.js"
+  ]
+}
