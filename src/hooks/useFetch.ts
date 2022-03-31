@@ -9,7 +9,6 @@ const HEADERS = {
 
 const useFetch = <T>(url: string) => {
   const BASE_URL = process.env.REACT_APP_BASE_URL;
-  console.log('BASE_URL: ', process.env.REACT_APP_BASE_URL);
 
   const [data, setData] = useState<T | null>(null);
 
