@@ -1,9 +1,10 @@
 import AppButton from "../../AppButton/AppButton";
+import { UPLOAD_STAGE } from "../UploadRecipe";
 import "./UploadRecipeStageActions.css";
 
 interface UploadRecipeStageProps {
   stage: number;
-  onStageUpdate: (stage: number) => void;
+  onStageUpdate: (stage: UPLOAD_STAGE) => void;
 }
 
 const UploadRecipeStageActions = (props: UploadRecipeStageProps) => {

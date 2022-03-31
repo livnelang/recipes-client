@@ -32,7 +32,7 @@ const componentsPreview: ComponentPreview[] = [
   },
   {
     name: "Range Slider",
-    element: <RangeSlider onValueChange={(e) => {}} />,
+    element: <RangeSlider onValueChange={(e) => {}} value={90} />,
   },
 ];
 

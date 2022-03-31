@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { ChangeEvent } from "react";
 import CoverPhotoImg from "../../../assets/images/upload_cover.svg";
 import RangeSlider from "../../InputFields/RangeSlider/RangeSlider";
@@ -69,6 +68,7 @@ const UploadRecipeDetails = (props: UploadRecipeDetailsProps) => {
       <div className="section groupInput">
         <h3 className="title">Food Name</h3>
         <TextField
+          value={props.form.name}
           name="food_name"
           placeholder="Enter food name"
           onChange={(e) => onFormFieldChange("name", e.target.value)}
@@ -77,6 +77,7 @@ const UploadRecipeDetails = (props: UploadRecipeDetailsProps) => {
       <div className="section groupInput">
         <h3 className="title">Description</h3>
         <TextArea
+          value={props.form.description}
           name="food_description"
           placeholder="Tell a little about your food"
           onChange={(e) => onFormFieldChange("description", e.target.value)}
@@ -88,6 +89,7 @@ const UploadRecipeDetails = (props: UploadRecipeDetailsProps) => {
           <span className="durationMinutesText">(in minutes)</span>
         </h3>
         <RangeSlider
+          value={props.form.preperationLength}
           onValueChange={(value) =>
             onFormFieldChange("preperationLength", value)
           }

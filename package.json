@@ -30,7 +30,8 @@
     "start": "set PORT=8080 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier-fix": "prettier --write \"src/**/*.tsx\""
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +53,7 @@
   },
   "devDependencies": {
     "axios": "^0.21.1",
-    "eslint": "^7.11.0"
+    "eslint": "^7.11.0",
+    "prettier": "2.5.1"
   }
 }

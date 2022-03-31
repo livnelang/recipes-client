@@ -5,6 +5,7 @@ import { useState } from "react";
 
 interface RangeSliderProps {
   onValueChange: (value: number) => void;
+  value: number;
 }
 
 const RangeSlider = (props: RangeSliderProps) => {
@@ -23,7 +24,7 @@ const RangeSlider = (props: RangeSliderProps) => {
       <InputRange
         maxValue={MAX_VALUE}
         minValue={MIN_VALUE}
-        value={range as number}
+        value={props.value}
         onChange={(value) => handleValueChange(value as number)}
       />
     </div>
