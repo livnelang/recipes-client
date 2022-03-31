@@ -1,0 +1,14 @@
+.TextArea {
+    display: flex;
+    width: 100%;
+    min-height: 80px;
+    border: 1px solid #D0DBEA;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 16px;
+    font-family: Poppins;
+}
+
+.TextArea:focus {
+    outline: none;
+}

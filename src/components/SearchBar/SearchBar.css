@@ -1,0 +1,18 @@
+.SearchBar {
+    padding: 16px 24px;
+    background: #F4F5F7;
+    border-radius: 32px;
+    display: flex;
+}
+
+.SearchBar input[type="text"] {
+    background: none;
+    border: none;
+    font-size: 18px;
+    margin-left: 8px;
+    color: var(  --secondary);
+}
+
+.SearchBar input[type="text"]:focus {
+    outline: none;
+}

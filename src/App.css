@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  /* padding: 0 24px; */
 }
 
 .App-logo {
@@ -35,4 +36,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.lambda-click-container {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.lambda-click-container:hover {
+  opacity: 0.6;;
+}
+
+h1, h2, h3, h4 {
+  color: #3E5481;
 }

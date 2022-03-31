@@ -1,0 +1,7 @@
+.Ingredient {
+    display: flex;
+}
+
+.Ingredient img {
+    margin-right: 8px;
+}

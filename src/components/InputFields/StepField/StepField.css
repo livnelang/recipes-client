@@ -1,0 +1,26 @@
+.StepField {
+    display: flex;
+    align-items: flex-start;
+}
+
+.StepField .numberIndicator {
+    display: flex;
+    flex-direction: column;
+    margin-right: 18px;
+}
+
+.StepField .numberIndicator .stepNumber {
+    margin-bottom: 16px;
+}
+
+.StepField .stepContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.StepField .stepContent .stepPicture {
+    background: #F4F5F7;
+    border-radius: 8px;
+    padding: 10px 0;
+    margin-top: 3px;
+}

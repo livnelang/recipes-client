@@ -1,0 +1,40 @@
+.UploadRecipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 24px 24px 0 24px;
+    color: var(  --secondary);
+    z-index: 999999999;
+    background: #ffffff;
+}
+
+.UploadRecipe .section {
+    width: 100%;
+}
+
+.UploadRecipe > .section + .section {
+    margin-top: 16px;
+}
+
+.UploadRecipe .stepsSection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.UploadRecipe .stepsSection .stepIndicator {
+    color: var(--secondary);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.UploadRecipe .stepsSection .stepIndicator .currentState {
+    color: var(--main);
+}
+
+.UploadRecipe .stepsSection .cancelBtn{
+    color: #FF6464;
+    font-weight: 600;
+    font-size: 17px;
+}
