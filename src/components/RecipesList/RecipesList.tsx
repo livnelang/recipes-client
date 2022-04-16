@@ -25,8 +25,6 @@ const RecipesList = () => {
   };
 
   useEffect(() => {
-    console.log("render!");
-    console.log("items: ", items);
     if (items !== null && recipes.length === 0) {
       const extendedRecipes = items.data as ExtendedRecipe[];
       extendedRecipes.forEach((recipe) => {

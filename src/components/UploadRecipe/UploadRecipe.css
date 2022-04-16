@@ -10,8 +10,30 @@
     background: #ffffff;
 }
 
+.UploadRecipe .recipeFormContainer {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 150px;
+    padding-bottom: 40px;
+    overflow-y: scroll;
+}
+
 .UploadRecipe .section {
     width: 100%;
+}
+
+.UploadRecipe .sectionsContainer > .section + .section {
+    margin-top: 24px;
+}
+ 
+.UploadRecipe .sectionsContainer .groupInput {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.UploadRecipe .sectionsContainer .groupInput .title {
+    margin-bottom: 12px;
 }
 
 .UploadRecipe > .section + .section {

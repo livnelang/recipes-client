@@ -75,6 +75,16 @@ const UploadRecipe = () => {
     });
   };
 
+  const handleClickAddIngredient = () => {
+    setRecipeForms({
+      detailsForm: recipeForms.detailsForm,
+      stepsForm: {
+        ...recipeForms.stepsForm,
+        ingredients: [...recipeForms.stepsForm.ingredients, ""],
+      },
+    });
+  };
+
   const renderRecipeStage = () => {
     switch (currentStage) {
       case 1: {
@@ -90,6 +100,7 @@ const UploadRecipe = () => {
           <UploadRecipeSteps
             form={recipeForms.stepsForm}
             onFieldChange={handleStepsFormFieldChange}
+            onClickAddIngredient={handleClickAddIngredient}
           ></UploadRecipeSteps>
         );
       }
@@ -102,7 +113,6 @@ const UploadRecipe = () => {
 
   const handleSetStage = (incomingStage: UPLOAD_STAGE) => {
     setCurrenStage(incomingStage);
-    console.log("incoming stage: ", incomingStage);
   };
 
   return (

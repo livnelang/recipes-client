@@ -14,3 +14,9 @@
     background: #F4F5F7;
     color: var(--main);
 }
+
+.AppButton.transparent {
+    background: transparent;
+    border: 1px solid #D0DBEA;
+    color: var(--main);
+}

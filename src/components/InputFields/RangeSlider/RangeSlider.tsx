@@ -14,7 +14,6 @@ const RangeSlider = (props: RangeSliderProps) => {
   const [range, setRange] = useState<number>(MAX_VALUE / 2);
 
   const handleValueChange = (value: number) => {
-    console.log("incoming value: ", value);
     setRange(value);
     props.onValueChange(range);
   };

@@ -1,6 +1,6 @@
 import "./AppButton.css";
 
-export type AppButtonVariant = "primary" | "grey";
+export type AppButtonVariant = "primary" | "grey" | "transparent";
 
 export interface AppButtonProps {
   text: string;

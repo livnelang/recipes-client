@@ -1,25 +1,3 @@
-.UploadRecipeDetails {
-    width: 100%;
-    margin-top: 24px;
-    margin-bottom: 150px;
-    padding-bottom: 40px;
-    overflow-y: scroll;
-}
-
-.UploadRecipeDetails > .section + .section {
-    margin-top: 24px;
-}
- 
-.UploadRecipeDetails .groupInput {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.UploadRecipeDetails .groupInput .title {
-    margin-bottom: 12px;
-}
-
 .UploadRecipeDetails .groupInput .title .durationMinutesText {
     color: var(--secondary);
     font-size: 17px;

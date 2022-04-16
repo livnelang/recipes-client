@@ -24,7 +24,9 @@ const componentsPreview: ComponentPreview[] = [
   },
   {
     name: "Ingredient",
-    element: <Ingredient />,
+    element: (
+      <Ingredient onDelete={() => {}} value="" onValueChange={() => {}} />
+    ),
   },
   {
     name: "Step Field",

@@ -1,7 +1,14 @@
 .Ingredient {
     display: flex;
+    align-items: center;
 }
 
 .Ingredient img {
     margin-right: 8px;
+}
+
+.Ingredient .trash {
+    margin-left: 16px;
+    color: #3E5481;
+    font-size: 18px;
 }
