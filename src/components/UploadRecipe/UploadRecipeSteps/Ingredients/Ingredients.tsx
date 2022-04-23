@@ -1,4 +1,4 @@
-import { FaPlus } from "react-icons/fa";
+import AddItemButton from "../../../AddItemButton/AddItemButton";
 import Ingredient from "../../../InputFields/Ingredient/Ingredient";
 import "./Ingredients.css";
 
@@ -25,12 +25,10 @@ const Ingredients = (props: IngredientsProps) => {
           );
         })}
       </div>
-      <div
-        className={`AppButton transparent addItemBtn`}
-        onClick={props.onClickAddIngredient}
-      >
-        <FaPlus /> <span className="btnText">Ingredient</span>
-      </div>
+      <AddItemButton
+          text="Ingredient"
+          onClick={props.onClickAddIngredient}
+        />
     </div>
   );
 };

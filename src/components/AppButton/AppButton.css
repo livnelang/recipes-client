@@ -20,18 +20,3 @@
     border: 1px solid #D0DBEA;
     color: var(--main);
 }
-
-/* Add another item style */
-.AppButton.addItemBtn {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 32px;
-}
-
-.AppButton.addItemBtn .btnText {
-    margin-left: 5px;
-    font-weight: 500;
-    font-size: 15px;
-}

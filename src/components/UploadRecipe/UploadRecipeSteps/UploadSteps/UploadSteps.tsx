@@ -1,4 +1,4 @@
-import { FaPlus } from "react-icons/fa";
+import AddItemButton from "../../../AddItemButton/AddItemButton";
 import StepField from "../../../InputFields/StepField/StepField";
 import { Step } from "../../../RecipeCard/Recipe";
 import "./UploadSteps.css";
@@ -30,15 +30,11 @@ const UploadSteps = (props: UploadStepsProps) => {
         })}
       </div>
       <div className="stepsActions">
-        <div
-          className={
-            "AppButton transparent addItemBtn " +
-            (props.steps.length > 0 ? "shrinked" : "")
-          }
+        <AddItemButton
+          text="Step"
           onClick={props.onClickAddStep}
-        >
-          <FaPlus /> <span className="btnText">Step</span>
-        </div>
+          extraClasses={props.steps.length > 0 ? ["shrinked"] : []}
+        />
       </div>
     </div>
   );

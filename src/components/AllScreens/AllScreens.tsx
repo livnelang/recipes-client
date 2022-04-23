@@ -5,6 +5,8 @@ import StepField from "../InputFields/StepField/StepField";
 import TextArea from "../InputFields/TextArea/TextArea";
 import TextField from "../InputFields/TextField/TextField";
 import RangeSlider from "../InputFields/RangeSlider/RangeSlider";
+import AppButton from "../AppButton/AppButton";
+import AddItemButton from "../AddItemButton/AddItemButton";
 
 interface ComponentPreview {
   name: string;
@@ -42,6 +44,14 @@ const componentsPreview: ComponentPreview[] = [
   {
     name: "Range Slider",
     element: <RangeSlider onValueChange={(e) => {}} value={90} />,
+  },
+  {
+    name: "App Button",
+    element: <AppButton text={"Click me!"} />,
+  },
+  {
+    name: "Add Item Button",
+    element: <AddItemButton text="Click me!" onClick={() => {}} />,
   },
 ];
 

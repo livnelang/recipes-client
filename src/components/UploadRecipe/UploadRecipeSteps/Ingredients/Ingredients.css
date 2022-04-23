@@ -9,3 +9,7 @@
 .Ingredients .ingredientsContainer .Ingredient + .Ingredient {
     margin-top: 24px;
 }
+
+.Ingredients .AddItemButton {
+    margin-top: 32px;
+}
