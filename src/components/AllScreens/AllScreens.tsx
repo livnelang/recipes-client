@@ -30,7 +30,14 @@ const componentsPreview: ComponentPreview[] = [
   },
   {
     name: "Step Field",
-    element: <StepField stepNumber={1} />,
+    element: (
+      <StepField
+        stepNumber={1}
+        step={{ text: "Mix all ingredients in a bowl!", images: [] }}
+        onChange={() => {}}
+        onDelete={() => {}}
+      />
+    ),
   },
   {
     name: "Range Slider",

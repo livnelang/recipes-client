@@ -34,7 +34,7 @@ const UploadRecipeDetails = (props: UploadRecipeDetailsProps) => {
       <div className="sectionsContainer">
         <div
           className={
-            "section coverSection " +
+            "section fileInputContainer coverSection " +
             (props.form.coverPhoto === null ? "" : "selectedImage")
           }
         >
@@ -43,7 +43,7 @@ const UploadRecipeDetails = (props: UploadRecipeDetailsProps) => {
               <input
                 type="file"
                 onChange={onFileInputChange}
-                className="coverPhotoInput"
+                className="fileInput"
               ></input>
               <div>
                 <img src={CoverPhotoImg} alt="" />
@@ -55,7 +55,7 @@ const UploadRecipeDetails = (props: UploadRecipeDetailsProps) => {
             </>
           ) : (
             <>
-              <img src={props.form.coverPhoto} alt="" />
+              <img src={props.form.coverPhoto} alt="" className="fileImage" />
               <span
                 className="removeSelectedImage"
                 onClick={() => onFormFieldChange("coverPhoto", null)}

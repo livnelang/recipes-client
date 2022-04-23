@@ -2,20 +2,6 @@
     width: 100%;
 }
 
-.Ingredients .AppButton {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 32px;
-}
-
-.Ingredients .AppButton .btnText {
-   margin-left: 5px;
-   font-weight: 500;
-   font-size: 15px;
-}
-
 .Ingredients .ingredientsContainer {
    width: 100%;
 }

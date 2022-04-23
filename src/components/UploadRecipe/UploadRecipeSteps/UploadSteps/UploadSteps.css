@@ -1,0 +1,22 @@
+
+.UploadSteps .stepsContainer {
+   width: 100%;
+}
+
+.UploadSteps .stepsContainer .StepField + .StepField {
+    margin-top: 24px;
+}
+
+.UploadSteps .stepsActions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.UploadSteps .stepsActions .AppButton {
+    margin-top: 16px;
+}
+
+.UploadSteps .stepsActions .AppButton.shrinked {
+    width: calc(100% - 42px);
+}

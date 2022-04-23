@@ -16,11 +16,34 @@
 .StepField .stepContent {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .StepField .stepContent .stepPicture {
+    margin-top: 3px;
+}
+
+.StepField .imageContainer {
+    position: relative;
+    width: 100%;
+}
+
+.StepField .imageContainer img{
+    height: 170px;
+}
+
+.StepField .fileInputContainer {
     background: #F4F5F7;
     border-radius: 8px;
     padding: 10px 0;
-    margin-top: 3px;
+}
+
+.StepField .removeSelectedImage {
+    position: absolute;
+    bottom: 10px;
+    left: -25px;
+}
+
+.StepField .stepActions {
+    position: relative;
 }

@@ -34,8 +34,12 @@ const UploadRecipeFormsInitialState: UploadRecipeForms = {
     preperationLength: 90,
   },
   stepsForm: {
-    ingredients: [],
-    steps: [],
+    ingredients: ["", ""],
+    steps: [
+      {
+        text: "",
+      },
+    ],
   },
 };
 
@@ -85,6 +89,16 @@ const UploadRecipe = () => {
     });
   };
 
+  const handleClickAddStep = () => {
+    setRecipeForms({
+      detailsForm: recipeForms.detailsForm,
+      stepsForm: {
+        ...recipeForms.stepsForm,
+        steps: [...recipeForms.stepsForm.steps, { text: "" }],
+      },
+    });
+  };
+
   const renderRecipeStage = () => {
     switch (currentStage) {
       case 1: {
@@ -101,6 +115,7 @@ const UploadRecipe = () => {
             form={recipeForms.stepsForm}
             onFieldChange={handleStepsFormFieldChange}
             onClickAddIngredient={handleClickAddIngredient}
+            onClickAddStep={handleClickAddStep}
           ></UploadRecipeSteps>
         );
       }
