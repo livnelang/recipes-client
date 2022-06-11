@@ -1,14 +1,15 @@
+import { useSelector } from "react-redux";
 import { RouteProps, Redirect, Route } from "react-router";
-import { useThemeContext } from "../../UserContext";
-// import AuthService from "../../services/AuthService";
+import { RootState } from "../../store/rtkStore";
 
 export const ProtectedRoute = (props: RouteProps) => {
-  // const authService = AuthService();
   const authenticationPath = "/";
 
-  const { isLoggedUser } = useThemeContext();
+  const isLoggedUser = useSelector(
+    (state: RootState) => state.auth.loggedUser !== null
+  );
 
-  if (isLoggedUser()) {
+  if (isLoggedUser) {
     return <Route {...props} />;
   } else {
     return <Redirect to={{ pathname: authenticationPath }} />;

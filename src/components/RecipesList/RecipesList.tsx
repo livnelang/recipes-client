@@ -1,17 +1,29 @@
-import { useEffect, useState } from "react";
-import { useRecoilState } from "recoil";
-// import { useRouteMatch } from "react-router-dom";
-import useFetch from "../../hooks/useFetch";
-import { recipesState } from "../../store/store";
-import { ExtendedRecipe, Recipes } from "../RecipeCard/Recipe";
+import { useCallback, useEffect, useState } from "react";
+import APIService from "../../services/API";
+import { useSelector, useDispatch } from "react-redux";
+import { ExtendedRecipe, Recipe } from "../RecipeCard/Recipe";
 import RecipeCard from "../RecipeCard/RecipeCard";
 import SearchBar from "../SearchBar/SearchBar";
 import "./RecipesList.css";
+import { setRecipes } from "../../store/slices/recipesSlice";
+import { RootState } from "../../store/rtkStore";
 
-const RecipesList = () => {
-  const URL = "/recipes";
-  const [recipes, setRecipes] = useRecoilState(recipesState);
-  const items: Recipes | null = useFetch(URL);
+interface Props {
+  api: APIService;
+}
+
+const RecipesList = (props: Props) => {
+  const { api } = props;
+
+  const recipesfgfg = useSelector((state: RootState) => state);
+  console.log(recipesfgfg);
+
+  const recipes: ExtendedRecipe[] = useSelector(
+    (state: RootState) => state.recipes.items
+  );
+  const dispatch = useDispatch();
+
+  const [isLoadingItems, setIsLoadingItems] = useState<boolean>(false);
   const [searchTerm, setSearchTerm] = useState<string | null>(null);
 
   const handleSearchBarText = (value: string) => {
@@ -24,24 +36,43 @@ const RecipesList = () => {
       : recipe.name.toLowerCase().includes(searchTerm);
   };
 
-  useEffect(() => {
-    if (items !== null && recipes.length === 0) {
-      const extendedRecipes = items.data as ExtendedRecipe[];
+  const populateItems = useCallback(
+    (recipes: Recipe[]) => {
+      const extendedRecipes = recipes as ExtendedRecipe[];
       extendedRecipes.forEach((recipe) => {
         const hours = Math.floor(recipe.preperationLength / 60);
         const minutes = recipe.preperationLength % 60;
         recipe.preperationText =
           hours > 0 ? `${hours} h, ${minutes} minutes` : `${minutes} minutes`;
       });
-      setRecipes(extendedRecipes);
+      dispatch(setRecipes({ items: extendedRecipes }));
+      // setRecipes(extendedRecipes);
+    },
+    [dispatch]
+  );
+
+  useEffect(() => {
+    if (recipes.length > 0) {
+      return;
     }
-  }, [items, recipes.length, setRecipes]);
+
+    setIsLoadingItems(true);
+    api
+      .getItems()
+      .then((res) => {
+        populateItems(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => setIsLoadingItems(false));
+  }, [api, populateItems, recipes.length]);
 
   return (
     <div className="RecipesList">
       <SearchBar handleSearchText={handleSearchBarText}></SearchBar>
       <div className="listContainer">
-        {items === null && recipes.length === 0 ? (
+        {isLoadingItems ? (
           "Loading"
         ) : (
           <>

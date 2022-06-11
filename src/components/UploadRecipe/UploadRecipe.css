@@ -6,7 +6,7 @@
     height: 100%;
     margin: 24px 24px 0 24px;
     color: var(  --secondary);
-    z-index: 999999999;
+    z-index: 9999;
     background: #ffffff;
 }
 

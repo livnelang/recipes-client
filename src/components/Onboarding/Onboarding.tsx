@@ -2,14 +2,12 @@ import UndrawBurgerImg from "../../assets/images/undraw_hamburger.svg";
 import "./Onboarding.css";
 import AppButton from "../AppButton/AppButton";
 import { useHistory } from "react-router-dom";
-import { LoggedUser } from "../../store/store";
-import { useThemeContext } from "../../UserContext";
-// import AuthService from "../../services/AuthService";
+import { LoggedUser, setUser } from "../../store/slices/authenticationSlice";
+import { useDispatch } from "react-redux";
 
 const Onboarding = () => {
+  const disptach = useDispatch();
   const history = useHistory();
-  // const authService = AuthService();
-  const { setLoggedUser } = useThemeContext();
 
   return (
     <div className="Onboarding">
@@ -24,15 +22,16 @@ const Onboarding = () => {
         <AppButton
           text="Get Started"
           onClick={() => {
-            localStorage.setItem("token", JSON.stringify("asdsad"));
+            // localStorage.setItem("token", JSON.stringify("asdsad"));
             const mockUser: LoggedUser = {
               name: "asd",
               lastName: "sfgfg",
+              token: "kj23h42j3k4hkjh",
             };
 
-            setLoggedUser(mockUser);
+            disptach(setUser({ loggedUser: mockUser }));
+            // setLoggedUser(mockUser);
 
-            // authService.setCurrentUser(a);
             history.push("/main/list");
           }}
         />

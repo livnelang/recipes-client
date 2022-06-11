@@ -13,7 +13,7 @@ export interface Recipe {
 
 export interface Step {
     text: string;
-    images?: string[];
+    images: string[];
 }
 
 export interface ExtendedRecipe extends Recipe {

@@ -25,7 +25,14 @@ const UploadRecipeDetails = (props: UploadRecipeDetailsProps) => {
 
   const onFileInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      props.onFieldChange("coverPhoto", URL.createObjectURL(e.target.files[0]));
+      const reader = new FileReader();
+      reader.readAsDataURL(e.target.files[0]);
+      reader.onloadend = function () {
+        const base64data = reader.result;
+        if (base64data !== null) {
+          props.onFieldChange("coverPhoto", base64data.toString());
+        }
+      };
     }
   };
 
@@ -35,10 +42,10 @@ const UploadRecipeDetails = (props: UploadRecipeDetailsProps) => {
         <div
           className={
             "section fileInputContainer coverSection " +
-            (props.form.coverPhoto === null ? "" : "selectedImage")
+            (props.form.coverPhoto === "" ? "" : "selectedImage")
           }
         >
-          {props.form.coverPhoto === null ? (
+          {props.form.coverPhoto === "" ? (
             <>
               <input
                 type="file"
@@ -58,7 +65,7 @@ const UploadRecipeDetails = (props: UploadRecipeDetailsProps) => {
               <img src={props.form.coverPhoto} alt="" className="fileImage" />
               <span
                 className="removeSelectedImage"
-                onClick={() => onFormFieldChange("coverPhoto", null)}
+                onClick={() => onFormFieldChange("coverPhoto", "")}
               >
                 <FaTrashAlt />
               </span>

@@ -5,6 +5,7 @@ import "./UploadRecipeStageActions.css";
 interface UploadRecipeStageProps {
   stage: number;
   onStageUpdate: (stage: UPLOAD_STAGE) => void;
+  onClickSubmitForm: () => void;
 }
 
 const UploadRecipeStageActions = (props: UploadRecipeStageProps) => {
@@ -29,7 +30,10 @@ const UploadRecipeStageActions = (props: UploadRecipeStageProps) => {
               variant="grey"
               onClick={() => props.onStageUpdate(1)}
             ></AppButton>
-            <AppButton text="Next"></AppButton>
+            <AppButton
+              text="Submit"
+              onClick={props.onClickSubmitForm}
+            ></AppButton>
           </div>
         );
       }
@@ -38,7 +42,9 @@ const UploadRecipeStageActions = (props: UploadRecipeStageProps) => {
     }
   };
 
-  return <div className="UploadRecipeStageActions">{renderButtons()}</div>;
+  return <div className="UploadRecipeStageActions">
+    {renderButtons()}
+  </div>;
 };
 
 export default UploadRecipeStageActions;

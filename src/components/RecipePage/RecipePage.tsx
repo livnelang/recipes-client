@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { useRecoilValue } from "recoil";
-import { recipesList } from "../../store/store";
+import { useSelector } from "react-redux";
+
 import { ExtendedRecipe } from "../RecipeCard/Recipe";
 import "./RecipePage.css";
 import RecipeCircleImg from "../../assets/images/recipe_circle.svg";
 import RecipeStep from "./RecipeStep/RecipeStep";
 import AbsoluteSkeleton from "../AbsoluteSkeleton/AbsoluteSkeleton";
+import { RootState } from "../../store/rtkStore";
 
 type RecipeParams = {
   id: string;
@@ -17,7 +18,9 @@ const RecipePage = () => {
 
   let { id } = useParams<RecipeParams>();
 
-  const recipes = useRecoilValue(recipesList);
+  const recipes: ExtendedRecipe[] = useSelector(
+    (state: RootState) => state.recipes.items
+  );
   const recipe: ExtendedRecipe | undefined = recipes.find((r) => r.id === id);
 
   useEffect(() => {

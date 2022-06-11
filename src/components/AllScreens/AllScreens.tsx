@@ -7,6 +7,7 @@ import TextField from "../InputFields/TextField/TextField";
 import RangeSlider from "../InputFields/RangeSlider/RangeSlider";
 import AppButton from "../AppButton/AppButton";
 import AddItemButton from "../AddItemButton/AddItemButton";
+import AppOverlaySpinner from "../AppOverlaySpinner/AppOverlaySpinner";
 
 interface ComponentPreview {
   name: string;
@@ -52,6 +53,10 @@ const componentsPreview: ComponentPreview[] = [
   {
     name: "Add Item Button",
     element: <AddItemButton text="Click me!" onClick={() => {}} />,
+  },
+  {
+    name: "App Overlay Spinner",
+    element: <AppOverlaySpinner loadingText="Uploading" />,
   },
 ];
 

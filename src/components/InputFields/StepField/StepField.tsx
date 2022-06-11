@@ -21,13 +21,21 @@ const StepField = (props: StepFieldProps) => {
     });
   };
 
+  const addEncodedImage = (encodedImage: string) => {
+    const images = props.step.images ?? [];
+    handleStepChange("images", [...images, encodedImage]);
+  };
+
   const onFileInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      const images = props.step.images ?? [];
-      handleStepChange("images", [
-        ...images,
-        URL.createObjectURL(e.target.files[0]),
-      ]);
+      const reader = new FileReader();
+      reader.readAsDataURL(e.target.files[0]);
+      reader.onloadend = function () {
+        const base64data = reader.result;
+        if (base64data !== null) {
+          addEncodedImage(base64data.toString());
+        }
+      };
     }
   };
 
