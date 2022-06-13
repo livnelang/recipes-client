@@ -57,15 +57,17 @@ const RecipesList = (props: Props) => {
     }
 
     setIsLoadingItems(true);
-    api
-      .getItems()
-      .then((res) => {
-        populateItems(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-      .finally(() => setIsLoadingItems(false));
+    setTimeout(() => {
+      api
+        .getItems()
+        .then((res) => {
+          populateItems(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+        .finally(() => setIsLoadingItems(false));
+    }, 400);
   }, [api, populateItems, recipes.length]);
 
   return (
