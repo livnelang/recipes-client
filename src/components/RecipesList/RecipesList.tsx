@@ -7,6 +7,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import "./RecipesList.css";
 import { setRecipes } from "../../store/slices/recipesSlice";
 import { RootState } from "../../store/rtkStore";
+import RecipeListSkeleton from "../Skeletons/RecipeListSkeleton/RecipeListSkeleton";
 
 interface Props {
   api: APIService;
@@ -46,7 +47,6 @@ const RecipesList = (props: Props) => {
           hours > 0 ? `${hours} h, ${minutes} minutes` : `${minutes} minutes`;
       });
       dispatch(setRecipes({ items: extendedRecipes }));
-      // setRecipes(extendedRecipes);
     },
     [dispatch]
   );
@@ -73,7 +73,7 @@ const RecipesList = (props: Props) => {
       <SearchBar handleSearchText={handleSearchBarText}></SearchBar>
       <div className="listContainer">
         {isLoadingItems ? (
-          "Loading"
+          <RecipeListSkeleton></RecipeListSkeleton>
         ) : (
           <>
             {recipes.filter(filterItems).map((recipe, index) => {
