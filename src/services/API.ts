@@ -9,7 +9,7 @@ class APIService {
   }
 
   public async createRecipe(body: RecipeCreateParams): Promise<Recipe> {
-          return axios.post(BASE_URL + "recipes", body).then((res) => res.data);
+                return axios.post(BASE_URL + "recipes", body).then((res) => res.data);
   }
 }
 
