@@ -42,9 +42,7 @@ const UploadRecipeStageActions = (props: UploadRecipeStageProps) => {
     }
   };
 
-  return <div className="UploadRecipeStageActions">
-    {renderButtons()}
-  </div>;
+  return <div className="UploadRecipeStageActions">{renderButtons()}</div>;
 };
 
 export default UploadRecipeStageActions;
