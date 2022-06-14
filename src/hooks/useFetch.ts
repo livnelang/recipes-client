@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 
 const HEADERS = {
   headers: {
-    'Content-Type': 'application/json',
-    'Accept': 'application/json'
-  }
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  },
 };
 
 const useFetch = <T>(url: string) => {
@@ -22,7 +22,6 @@ const useFetch = <T>(url: string) => {
 
     if (data === null) {
       fetchData();
-
     }
   }, [BASE_URL, data, url]);
 

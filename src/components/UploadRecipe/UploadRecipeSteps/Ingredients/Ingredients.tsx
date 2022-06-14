@@ -25,10 +25,7 @@ const Ingredients = (props: IngredientsProps) => {
           );
         })}
       </div>
-      <AddItemButton
-          text="Ingredient"
-          onClick={props.onClickAddIngredient}
-        />
+      <AddItemButton text="Ingredient" onClick={props.onClickAddIngredient} />
     </div>
   );
 };
