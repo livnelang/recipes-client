@@ -59,7 +59,7 @@ const RecipesList = (props: Props) => {
     setIsLoadingItems(true);
     setTimeout(() => {
       api
-                    .getItems()
+                        .getItems()
         .then((res) => {
           populateItems(res.data);
         })
