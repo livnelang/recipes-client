@@ -40,7 +40,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prettier-fix": "prettier --write \"src/**/*.tsx\""
+    "prettier-fix": "prettier --write \"src/**/*.{tsx,ts}\"",
+    "prettier-check": "prettier --check \"src/**/*.{tsx,ts}\""
   },
   "eslintConfig": {
     "extends": [
